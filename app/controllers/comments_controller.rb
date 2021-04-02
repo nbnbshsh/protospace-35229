@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to prototype_path(@comment.prototype)
     else
-      render "prototypes/show" #views/prototypes/show.html.erbファイル参照
+      redirect_to "/prototypes/#{@comment.prototype.id}" 
     end
   end
 
